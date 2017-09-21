@@ -1,0 +1,1 @@
+"use strict";require.config({paths:{jquery:"common_js/jquery",common:"common_js/common",head:"header"}});

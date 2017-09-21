@@ -1,0 +1,178 @@
+$width_up:100%;
+$width:950px;
+$border:#E1DFDA;
+
+
+body{
+   
+}
+.req_header_up{
+    width:$width_up;
+     background: #F9F9F8;
+    height: 110px;
+    .req_header{
+        width: $width;
+        margin: 0 auto;
+        text-align: center;
+        img{
+            float: left;
+            padding-top: 29px;
+        }
+    }
+}
+#footer_up{
+    background: #F9F9F8;
+}
+
+p{
+    line-height: 34px;
+}
+.container_up{
+    width: $width;
+    border: 1px solid $border;
+    margin: 0 auto;
+    .login_dec{
+        border-bottom: 1px solid $border;
+    }
+    .p1{
+        float: left;
+        line-height: 30px;
+        padding: 10px 20px;
+        color: #FF002A;
+        font-size: 16px;
+    }
+    .p2{
+        float: right;
+        line-height: 30px;
+        padding: 10px 20px;
+        color: #63625D;
+        a:hover{
+            text-decoration: none;
+            color: #63625D;
+        }
+        
+    }
+}
+.container{
+    padding-bottom: 76px;
+    form{
+        margin-top: 50px;
+    }
+    .form-control{
+        border-radius: 2px;
+    }
+    .iden_btn{
+        border: 1px solid #C8C8C8;
+        background: #F5F5F5;
+        width: 127px;
+        height: 35px;
+        line-height: 34px;
+        margin-right: 14px;
+        border-radius: 0;
+        text-align: center;
+    }
+    .iden_btn:hover{
+        cursor: pointer;
+    }
+    .iden_img{
+        img{
+            width: 127px;
+            height: 35px;
+            margin-left: -16px;
+        }
+        img:hover{
+            cursor: pointer;
+        }
+    }
+    .input-left{
+        padding-left: 0;
+        display: none;
+    }
+    .input_img{
+        width: 30px;
+        height: 32px;
+        background: url(../img/req_img/register.png) no-repeat 7px 7px;
+        border-right: none;
+    }
+    .input-group-addon{
+        border-right: none;
+    }
+    input{
+        box-shadow: -1px 0 2px 2px white inset;
+        padding-left: 2px;
+    }
+    input::-webkit-input-placeholder{
+        font-size: 10px;
+    }
+    input::-moz-placeholder{
+        font-size: 10px;
+    }
+    input:-moz-placeholder{
+        font-size: 10px;
+    }
+    input:-ms-input-placeholder{
+        font-size: 10px;
+    }
+    .check_con{
+        width: 13px;
+        height: 13px;
+//      background: url(../img/req_img/register.png) left -473px;
+        border: 1px solid #55779B;
+        display: inline-block;
+        overflow: hidden;
+        margin-top: 2px; 
+        margin-left: 5px;
+    }
+    .check_con_2{
+        width: 13px;
+        height: 13px;
+        background: url(../img/req_img/register.png) -1px -474px;
+        display: inline-block;
+        overflow: hidden;
+        margin-top: 2px; 
+        margin-left: 5px;
+    }
+    .ok_dec:hover{
+        cursor: pointer;
+    }
+    .ok_dec{
+        text-indent: 40px;
+        line-height: 30px;
+        letter-spacing: 1px;
+        a{
+            letter-spacing: 0;
+        }
+    }
+    .ok_btn{
+        width: 300px;
+        height: 35px;
+        background: #E6133C;
+        color: white;
+        text-align: center;
+        font-size: 16px;
+        line-height: 34px;
+        position: relative;
+        left: 10px;
+    }
+    .ok_btn:hover{
+        background: #FA2244;
+        cursor: pointer;
+    }
+    .psd_btn{
+        margin-left: 1px!important;
+        padding:0 5px!important;
+        color: white;
+        background: #333;
+        
+    }
+    .psd_con{
+        position: relative;
+    }
+    .psd_btn_group{
+        position: absolute;
+        left: 78px;
+        top: 7px;        
+    }
+}
+
+

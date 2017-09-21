@@ -1,0 +1,1 @@
+"use strict";require(["../minjs/common_js/config"],function(){require(["jquery","common","header"],function(o){o("#footer_load").load("footer.html"),o(function(){var e=JSON.parse(Cookie.get("user"));o(".login_btn").click(function(){var r=o(".username").val(),n=o(".password").val(),s=!0;for(var a in e)e[a].username==r?e[a].password==n||(s=!1):s=!1;s&&(user_self=r)})})})});

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/goods_dec.css"/>
+		<script  src="../js/require.js" data-main="../js/goods_dec.js"></script>
+		<title></title>
+	</head>
+	<body>
+		<div id="header_load"></div>  
+		<script type="text/javascript">
+			var req=new XMLHttpRequest;
+			req.open("get","http://localhost:8000/html/header.html",false);
+			req.send();
+			var header=document.getElementById("header_load");
+			header.innerHTML=req.response;
+		</script>
+//		<script type="text/html" id="temp_city">
+			<ul>
+				<% for(var val in data){ %>
+				<li><a href="###"><%= data[val] %></a></li>
+				<% } %>
+			</ul>
+		</script>
+		
+		<div id="goods_main_up">
+			<div class="goods_main">
+				<div class="goods_index">
+					<div class="goods_lists">
+						
+					</div>
+					<div class="goods_icon">
+						
+					</div>
+				</div>
+				<div class="goods_detail">
+					<div class="goods_display">
+						<div class="goods_display_top">
+							<span></span>
+								<img src="../img/goods_dec_img/1914134739_360x360.jpg"/>
+							<div class="cursor">
+								
+							</div>
+							<div class="mag">
+								<img src="../img/goods_dec_img/1914134739_360x360.jpg"/>
+							</div>
+						</div>
+						<div class="goods_display_thumbnail">
+							<div class="goods_display_img">
+								<span></span>
+								<img src="../img/goods_dec_img/1914134739_360x360.jpg"/>
+							</div>
+							<div class="goods_display_img">
+								<span></span>
+								<img src="../img/goods_dec_img/1943414692_360x360.jpg"/>
+							</div>
+							<div class="goods_display_img">
+								<span></span>
+								<img src="../img/goods_dec_img/1691526191_200x200.jpg"/>
+							</div>
+							<div class="goods_display_img">
+								<span></span>
+								<img src="../img/goods_dec_img/1392783968_360x360.jpg"/>
+							</div>
+						</div>
+						<div class="goods_share">
+							<div class="share">
+								
+							</div>
+							<p>商品编号 302010006373</p>
+						</div>
+					</div>
+					<div class="goods_info">
+						<p class="goods_tit">
+							索尼（SONY）55英寸 KD-55X9000E 4K超高清智能LED液晶电视 安卓6.0系统 X1芯片 HDR液晶电视
+						</p>
+						<p class="goods_subtit">
+							【先领券后下单,享6799元好价！每天限量1000张券,手慢无】4K HDR图像处理芯片X1 精锐光控Pro标准版 4K迅锐图像处理引擎PRO 特丽魅彩显示技术<a href="###">索尼55英寸4K电视+PS4 Pro居然只要9498元！限时！限时！限时！手慢无！</a>
+						</p>
+						<div class="goods_activity">
+							<div class="shangou">
+								
+							</div>距离活动结束还有:  <srong>10</srong>天  <strong>01</srong>小时 <strong> 48</srong>分  <strong>31</srong>秒  <a href="###">更多活动 ></a>
+						</div>
+						<p class="goods_price"><span>活动价</span><strong><span>￥</span>7499.00</strong></p>
+						<div class="coupon">
+							<span>领券</span>
+							<div class="coupon_ope">
+								<div class="coupon_left_1">
+									<a href="###">家电满1000元减100元可累计抵用券</a>
+								</div>
+								<div class="coupon_left_2">
+									立即领取
+								</div>
+								<div class="coupon_left_3">
+									<a href="###">共1项<span></span></a>
+								</div>
+							</div>
+						</div>
+						<div class="deliver">
+							<span>配送</span>
+							<div class="citys">
+								<em>上海黄浦区</em>
+								<i></i>
+								<div class="citys_lists">
+									<div class="citys_tit">
+										<ul>
+											<li>省份</li>
+											<li>城市</li>
+											<li class="citys_tit_3">县区</li>
+										</ul>
+									</div>
+									<div class="citys_main">
+										
+									</div>
+								</div>
+							</div>
+							<a href="###">免运费</a>
+						</div>
+						<div class="service">
+							<span>服务</span>
+							<div class="service_dec">
+								<p>本产品由供应商提供发货，并由百联提供售后服务，下单后3-5个工作日内送达</p>
+								<ul>
+									<li>不支持到店自提</li>
+									<li class="li_2"><a href="###">支持7天无理由退货</a></li>
+									<li>不支持货到付款</li>
+								</ul>
+							</div>
+						</div>
+						<div class="purchase">
+							<span>购买数量</span>
+							<div class="purchase_num">
+								<div class="purchase_num1 purchase_del">
+									-
+								</div>
+								<div class="purchase_num2">
+									0
+								</div>
+								<div class="purchase_num1 purchase_add">
+									+
+								</div>
+							</div>
+							<p>限购10件 ，库存16件</p>
+						</div>
+						<div class="user_operate">
+							<div class="user_buy">
+								立即购买
+							</div>
+							<div class="user_shop">
+								<i></i>
+								加入购物车
+							</div>
+							<div class="user_collect">
+								收藏
+							</div>
+						</div>
+						<div class="user_assess">
+							<span><em>99%</em>好评</span><i></i>
+							<span><a href="###">145</a>评价</span><i></i>
+							<span><a href="###" class="a_blue">评价返积分</a></span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="recommend">
+				<div class="recommend_tit">
+					<h2>购买此商品的顾客也会购买</h2>
+					<span><em><</em><i>1/2</i><em>></em></span>
+				</div>
+				<div class="recommend_goods">
+					<div class="goods_lists">
+						<dl>
+							<dt><a href="###"><img src="../img/goods_dec_img/1502801368_200x200.jpg"/></a></dt>
+							<a href="###"><dd>
+								索尼（SONY）43英寸 KD-43X8000E 4K超高清智能LED液能LED液能LED液晶电
+							</dd></a>
+							<span><em>￥</em><i>4499.0</i></span>
+						</dl>
+						<dl>
+							<dt><a href="###"><img src="../img/goods_dec_img/1502801368_200x200.jpg"/></a></dt>
+							<a href="###"><dd>
+								索尼（SONY）43英寸 KD-43X8000E 4K超高清智能LED液晶电
+							</dd></a>
+							<span><em>￥</em><i>4499.0</i></span>
+						</dl>
+						<dl>
+							<dt><a href="###"><img src="../img/goods_dec_img/1502801368_200x200.jpg"/></a></dt>
+							<a href="###"><dd>
+								索尼（SONY）43英寸 KD-43X8000E 4K超高清智能LED液晶电
+							</dd></a>
+							<span><em>￥</em><i>4499.0</i></span>
+						</dl>
+						<dl>
+							<dt><a href="###"><img src="../img/goods_dec_img/1502801368_200x200.jpg"/></a></dt>
+							<a href="###"><dd>
+								索尼（SONY）43英寸 KD-43X8000E 4K超高清智能LED液晶电
+							</dd></a>
+							<span><em>￥</em><i>4499.0</i></span>
+						</dl>
+						<dl class="">
+							<dt><a href="###"><img src="../img/goods_dec_img/1502801368_200x200.jpg"/></a></dt>
+							<a href="###"><dd>
+								索尼（SONY）43英寸 KD-43X8000E 4K超高清智能LED液晶电
+							</dd></a>
+							<span><em>￥</em><i>4499.0</i></span>
+						</dl>
+						
+					</div>
+				</div>
+			</div>
+			<div class="others">
+				<div class="others_left">
+					<p class="others_left_tit">
+						大家都在买
+					</p>
+					<dl>
+						<dt><a href="###"><img src="../img/goods_dec_img/1691526191_200x200.jpg"/></a></dt>
+						<a href="###"><dd>
+							夏普（SHARP）40英寸 LCD-40SF466A-BK 全高清WIFI智能平板电视（黑色）
+							夏普（SHARP）40英寸 LCD-40SF466A-BK 全高清WIFI智能平
+						</dd></a>
+						<span><em>￥</em><i>1698.0</i></span>
+					</dl>
+				</div>
+				<div class="others_right">
+					<div class="others_right_tit">
+						<div class="others_right_tit1">
+							商品介绍
+						</div>
+						<div class="others_right_tit1">
+							参数及包装
+						</div>
+						<div class="others_right_tit1">
+							售后服务
+						</div>
+						<div class="others_right_tit1">
+							评价详情(<span>145</span>)
+						</div>
+						<div class="others_right_tit2">
+							手机购买
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<div id="footer_load"></div>
+	</body>
+</html>

@@ -1,0 +1,775 @@
+            i,
+        em {
+            font-style: normal;
+        }
+        
+        body #banner_up {
+            background: #333333;
+            .banner_top {
+                >ul {
+                    >li {
+                        padding: 0 26px;
+                        >a {
+                            color: white!important;
+                        }
+                        .img_a_1 {
+                            img {
+                                display: none;
+                            }
+                        }
+                        .img_a_2 {
+                            img {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+                .banner_top_first_lists {
+                    display: none;
+                }
+                .banner_top_img {
+                    display: none;
+                }
+            }
+        }
+        
+        #goods_main_up {
+            width: 100%;
+            .goods_main {
+                width: 1190px;
+                margin: 0 auto;
+                .goods_index {
+                    width: 1190px;
+                    height: 47px;
+                    padding: 10px 0 20px 0;
+                    border-bottom: 1px solid #EEEEEE;
+                    margin-bottom: 30px;
+                }
+                .goods_lists {
+                    width: 630px;
+                    height: 24px;
+                    float: left;
+                    margin-top: 13px;
+                }
+                .goods_icon {
+                    float: right;
+                    height: 44px;
+                    width: 118px;
+                    border: 1px solid #eee;
+                    text-align: center;
+                }
+                .goods_detail {
+                    width: 1190px;
+                    height: 626px;
+                    .goods_display {
+                        width: 450px;
+                        height: 600px;
+                        float: left;
+                        span {
+                            height: 100%;
+                            width: 0px;
+                            display: inline-block;
+                            vertical-align: middle;
+                        }
+                        img {
+                            vertical-align: middle;
+                        }
+                        .goods_display_top {
+                            border: 1px solid #eee;
+                            text-align: center;
+                            float: left;
+                            width: 450px;
+                            height: 450px;
+                            position: relative;
+                            >img{
+                                width: 450px;
+                                height: 450px;
+                                float: left;
+                            }
+                            >img:hover{
+                                cursor: pointer;
+                            }
+                            .cursor{
+                                width: 150px;
+                                height: 150px;
+                                position: absolute;
+                                background: dodgerblue;
+                                opacity: 0.4;
+                                display: none;
+                            }
+                            .mag{
+                                width: 450px;
+                                height: 450px;
+                                position: absolute;
+                                left: 480px;
+                                top: 0;
+                                display: none;
+                                overflow: hidden;
+                                z-index: 99;
+                                >img{
+                                    width: 350px;
+                                    height: 350px;
+                                    position: absolute;
+                                }
+                            }
+                        }
+                        .goods_display_top:hover{
+                            cursor: pointer;
+                        }
+                        .goods_display_thumbnail {
+                            width: 450px;
+                            height: 80px;
+                            float: left;
+                            margin-top: 15px;
+                            text-align: center;
+                            .goods_display_img {
+                                text-align: center;
+                                vertical-align: middle;
+                                width: 90px;
+                                height: 85px;
+                                border: 1px solid #eee;
+                                display: inline-block;
+                                >span{
+                                    width: 0;
+                                    height: 100%;
+                                    display: inline-block;
+                                    vertical-align: middle;
+                                }
+                                img{
+                                    width: 80px;
+                                    height: 80px;
+                                }
+                            }
+                            .goods_display_img:hover{
+                                cursor: pointer;
+                            }
+                        }
+                        .goods_share {
+                            width: 450px;
+                            height: 30px;
+                            margin-top: 15px;
+                            float: left;
+                            p {
+                                float: right;
+                                width: 146px;
+                                height: 38px;
+                                line-height: 38px;
+                                text-align: center;
+                            }
+                        }
+                    }
+                    .goods_info {
+                        float: right;
+                        width: 710px;
+                        height: 38px;
+                        .goods_tit {
+                            width: 710px;
+                            height: 68px;
+                            padding-bottom: 10px;
+                            margin-top: -8px;
+                            font-weight: bold;
+                            font-size: 20px;
+                        }
+                        .goods_subtit {
+                            height: 48px;
+                            font-size: 14px;
+                            color: #333333;
+                            a {
+                                color: #4CB0E7;
+                            }
+                            a:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                        .goods_activity {
+                            height: 36px;
+                            margin-top: 16px;
+                            color: white;
+                            background: url(../img/goods_dec_img/purchase.png) no-repeat left top;
+                            .shangou {
+                                width: 36px;
+                                height: 36px;
+                                margin: 0 16px;
+                                float: left;
+                                background: url(../img/goods_dec_img/purchase.png) no-repeat -21px -36px;
+                            }
+                            >strong {
+                                font-size: 20px;
+                            }
+                            a {
+                                float: right;
+                                height: 36px;
+                                margin-right: 20px;
+                                line-height: 36px;
+                                font-size: 12px;
+                                color: white;
+                            }
+                        }
+                        .goods_price {
+                            width: 700px;
+                            height: 63px;
+                            padding-top: 8px;
+                            padding-left: 10px;
+                            border-top: 1px dashed #DDDDDD;
+                            border-bottom: 1px dashed #DDDDDD;
+                            background: #F9F9F9;
+                            >span {
+                                display: block;
+                                height: 48px;
+                                line-height: 48px;
+                                width: 52px;
+                                margin-right: 23px;
+                                float: left;
+                            }
+                            >strong {
+                                font-size: 30px;
+                                color: #EC595C;
+                                font-weight: bold;
+                                >span {
+                                    font-size: 18px;
+                                    line-height: 48px;
+                                }
+                            }
+                        }
+                        .coupon {
+                            width: 710px;
+                            height: 60px;
+                            >span {
+                                width: 54px;
+                                height: 18px;
+                                margin-left: 10px;
+                                margin-top: 28px;
+                                float: left;
+                            }
+                            .coupon_ope {
+                                width: 524px;
+                                height: 40px;
+                                padding: 15px 100px 0 20px;
+                                margin-top: 6px;
+                                float: left;
+                                .coupon_left_1 {
+                                    float: left;
+                                    width: 207px;
+                                    padding-left: 14px;
+                                    height: 28px;
+                                    border: 1px solid #F68587;
+                                    border-left: none;
+                                    background: url(../img/goods_dec_img/purchase.png) no-repeat -699px -40px;
+                                    >a {
+                                        line-height: 26px;
+                                        color: #F68587;
+                                    }
+                                    >a:hover {
+                                        text-decoration: underline;
+                                    }
+                                }
+                                .coupon_left_2 {
+                                    width: 48px;
+                                    height: 30px;
+                                    padding: 0 10px;
+                                    line-height: 30px;
+                                    text-align: center;
+                                    color: white;
+                                    float: left;
+                                    background: #F68587;
+                                }
+                                .coupon_left_3 {
+                                    height: 100%;
+                                    float: right;
+                                    margin-right: -60px;
+                                    >a {
+                                        line-height: 40px;
+                                        color: #333333;
+                                        >span {
+                                            display: inline-block;
+                                            width: 8px;
+                                            margin-left: 8px;
+                                            //                                  margin-top: -3px;
+                                            height: 5px;
+                                            background: url(../img/goods_dec_img/purchase.png) no-repeat -598px -113px;
+                                        }
+                                    }
+                                }
+                            }
+                            .coupon_ope:hover {
+                                box-shadow: 1px 1px 5px 1px #CCCCCC, -1px -1px 5px 1px #CCCCCC;
+                            }
+                        }
+                        .deliver {
+                            width: 710px;
+                            height: 27px;
+                            padding: 5px 0;
+                            float: left;
+                            >span {
+                                width: 50px;
+                                height: 22px;
+                                margin-left: 10px;
+                                float: left;
+                            }
+                            .citys {
+                                height: 25px;
+                                padding: 0 40px 0 10px;
+                                border: 1px solid #D2D2D2;
+                                float: left;
+                                padding-left: 10px;
+                                margin-left: 25px;
+                                position: relative;
+                                line-height: 25px;
+                                color: #333333;
+                                position: relative;
+                                .citys_lists{
+                                    width: 360px;
+                                    padding: 10px;
+                                    border: 1px solid #DDDDDD;
+                                    position: absolute;
+                                    top: 26px;
+                                    left: 0;
+                                    background: white;
+                                    z-index: 1;
+                                     border-radius: 1px;
+                                     display: none;
+                                    .citys_tit{
+                                        height: 32px;
+                                        width: 360px;
+                                        border-bottom: 1px solid #DDDDDD;
+                                        border-radius: 1px;
+                                        li{
+                                            float: left;
+                                            width: 30px;
+                                            height: 30px;
+                                            padding: 0 20px;
+                                            border-left: 1px solid #DDDDDD;
+                                            border-top: 1px solid #DDDDDD;
+                                            line-height: 30px;
+                                            text-align: center;
+                                            border-radius: 1px;
+                                        }
+                                        .li_active{
+                                            border-top: 2px solid #EC595C;
+                                            margin-top: -1px;
+                                            font-weight: bold;
+                                        }
+                                        .citys_tit_3{
+                                            border-right: 1px solid #DDDDDD;
+                                        }
+                                        
+                                    }
+                                    .citys_main{
+                                        padding: 12px 0;
+                                        li{
+                                            float: left;
+                                            width: 75px;
+                                            height: 26px;
+                                            margin-right: 15px;
+                                            margin-bottom: 5px;
+                                            line-height: 26px;
+                                            text-align: center;
+                                            a{
+                                                color: black;
+                                                display: block;
+                                            }
+                                            a:hover{
+                                                color: #EC595C;
+                                            }
+                                            .a_active{
+                                                background: #EC595C;
+                                                color: white;
+                                            }
+                                        }
+                                        
+                                    }
+                                }
+                                >i {
+                                    width: 9px;
+                                    height: 5px;
+                                    position: absolute;
+                                    right: 3px;
+                                    top: 10px;
+                                    background: url(../img/goods_dec_img/purchase.png) no-repeat -598px -113px;
+                                }
+                            }
+                            .citys:hover{
+                                cursor: pointer;
+                            }
+                            >a {
+                                float: left;
+                                width: 36px;
+                                height: 26px;
+                                margin-left: 10px;
+                                color: #333333;
+                                line-height: 26px;
+                            }
+                            >a:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                        .service {
+                            >span {
+                                width: 50px;
+                                height: 22px;
+                                margin-left: 10px;
+                                float: left;
+                            }
+                            .service_dec {
+                                width: 600px;
+                                height: 70px;
+                                margin-left: 25px;
+                                float: left;
+                                position: relative;
+                                >ul {
+                                    position: absolute;
+                                    bottom: 0;
+                                    left: 0;
+                                    color: #666666;
+                                    >li {
+                                        float: left;
+                                        padding: 0 20px 0 12px;
+                                        background: url(../img/goods_dec_img/purchase.png) no-repeat -164px -139px;
+                                    }
+                                    .li_2 {
+                                        background: url(../img/goods_dec_img/purchase.png) no-repeat -164px -183px;
+                                        >a {
+                                            color: #666666;
+                                        }
+                                        >a:hover {
+                                            color: #111111;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .purchase {
+                            width: 710px;
+                            height: 28px;
+                            padding: 5px 0;
+                            float: left;
+                            >span {
+                                width: 50px;
+                                height: 22px;
+                                margin-left: 10px;
+                                line-height: 22px;
+                                float: left;
+                            }
+                            .purchase_num {
+                                width: 106px;
+                                height: 28px;
+                                float: left;
+                                margin-left: 25px;
+                                -webkit-user-select: none;
+                                .purchase_num1 {
+                                    width: 26px;
+                                    height: 26px;
+                                    border: 1px solid #D2D2D2;
+                                    text-align: center;
+                                    color: #999999;
+                                    line-height: 26px;
+                                    float: left;
+                                    font-weight: bold;
+                                }
+                                .purchase_num1:hover {
+                                    border-color: #999999;
+                                    cursor: pointer;
+                                }
+                                .purchase_num2 {
+                                    width: 50px;
+                                    height: 26px;
+                                    border-top: 1px solid #D2D2D2;
+                                    border-bottom: 1px solid #D2D2D2;
+                                    text-align: center;
+                                    line-height: 26px;
+                                    float: left;
+                                }
+                            }
+                            >p {
+                                float: left;
+                                line-height: 28px;
+                                margin-left: 20px;
+                            }
+                        }
+                        .user_operate {
+                            width: 710px;
+                            height: 45px;
+                            padding: 5px 0;
+                            margin-top: 10px;
+                            float: left;
+                            .user_buy {
+                                margin-left: 85px;
+                                width: 166px;
+                                height: 48px;
+                                border: 1px solid #EC595C;
+                                color: #EE595C;
+                                text-align: center;
+                                line-height: 48px;
+                                font-weight: 700;
+                                background: #FFF8F9;
+                                border-radius: 2px;
+                                float: left;
+                                font-size: 18px;
+                            }
+                            .user_buy:hover {
+                                background: white;
+                                cursor: pointer;
+                            }
+                            .user_shop {
+                                margin-left: 10px;
+                                width: 170px;
+                                height: 50px;
+                                color: white;
+                                line-height: 48px;
+                                font-weight: 700;
+                                background: #EC595C;
+                                border-radius: 2px;
+                                float: left;
+                                font-size: 18px;
+                                >i {
+                                    width: 30px;
+                                    height: 40px;
+                                    margin-left: 28px;
+                                    margin-top: 5px;
+                                    float: left;
+                                    background: url(../img/goods_dec_img/commodity_new_icon.png) no-repeat left top;
+                                }
+                            }
+                            .user_shop:hover {
+                                background: #FE6E71;
+                                cursor: pointer;
+                            }
+                            .user_collect {
+                                width: 48px;
+                                height: 23px;
+                                padding-top: 25px;
+                                border: 1px solid #D2D2D2;
+                                color: #999999;
+                                float: left;
+                                margin-left: 10px;
+                                text-align: center;
+                                background: url(../img/goods_dec_img/purchase.png) no-repeat -418px -50px;
+                            }
+                            .user_collect:hover{
+                                cursor: pointer;
+                                background: url(../img/goods_dec_img/purchase.png) no-repeat -418px -111px;
+                                color: #333;
+                            }
+                            .user_collect_active{
+                                background:url(../img/goods_dec_img/purchase.png) no-repeat -418px -174px!important;
+                            }
+                        }
+                        .user_assess {
+                            width: 600px;
+                            height: 20px;
+                            padding: 20px 0 20px 84px;
+                            float: left;
+                            >i {
+                                height: 14px;
+                                width: 1px;
+                                float: left;
+                                margin: 0 15px;
+                                display: block;
+                                background: #CFCCD5;
+                            }
+                            >span {
+                                float: left;
+                                font-size: 14px;
+                                em {
+                                    color: #EC595C;
+                                    margin-right: 4px;
+                                }
+                                a {
+                                    margin-right: 2px;
+                                    font-weight: bold;
+                                }
+                                .a_blue {
+                                    color: #51B8F1;
+                                    font-weight: normal;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .recommend {
+                margin-top: 20px;
+                height: 348px;
+                width: 1190px;
+                margin: 0 auto;
+                .recommend_tit {
+                    width: 1190px;
+                    height: 18px;
+                    h2 {
+                        font-size: 18px;
+                        font-weight: bold;
+                        float: left;
+                    }
+                    span {
+                        float: right;
+                        >i {
+                            margin: 0 5px;
+                        }
+                    }
+                }
+                .recommend_goods {
+                    width: 1190p;
+                    height: 274px;
+                    clear: both;
+                    position: relative;
+                    margin-top: 20px;
+                    overflow: hidden;
+                    .goods_lists {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        height: 274px;
+                        width: 2380px;
+                    }
+                    dl {
+                        width: 200px;
+                        height: 274px;
+                        padding: 12px;
+                        border: 1px solid #EAEAEA;
+                        margin-right: 15px;
+                        float: left;
+                    }
+                    a {
+                        color: #333333;
+                    }
+                    dl dd {
+                        width: 200px;
+                        height: 38px;
+                        margin: 10px 0;
+                        line-height: 18px;
+                        overflow: hidden;
+                    }
+                    dd::after {
+                        content: "...";
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        padding-left: 40px;
+                    }
+                        dl dd:hover {
+                            text-decoration: underline;
+                        }
+                        span {
+                            display: block;
+                            height: 21px;
+                            color: #EC595C;
+                            i {
+                                font-size: 16px;
+                                font-weight: bold;
+                                line-height: 20px;
+                            }
+                            em {
+                                height: 16px;
+                            }
+                        }
+                    }
+                }
+                .others {
+                    width: 1190px;
+                    height: 11549px;
+                    margin: 25px 0;
+                    margin: 0 auto;
+                    .others_left {
+                        width: 208px;
+                        height: 11481px;
+                        float: left;
+                        border: 1px solid #EAEAEA;
+                        .others_left_tit {
+                            width: 208px;
+                            height: 40px;
+                            line-height: 40px;
+                            text-align: center;
+                            font-size: 16px;
+                            font-weight: bold;
+                            color: #333333;
+                            background: #F6F6F6;
+                        }
+                        dl {
+                            width: 200px;
+                            height: 280px;
+                            padding: 4px;
+                            a {
+                                color: #333333;
+                            }
+                            dd {
+                                line-height: 18px;
+                                position: relative;
+                                width: 200px;
+                                height: 38px;
+                                margin: 10px 0;
+                                ;
+                                overflow: hidden;
+                            }
+                            dd::after {
+                                content: "..";
+                                position: absolute;
+                                bottom: 0;
+                                right: 0;
+                                padding-left: 40px;
+                            }
+                            dd:hover {
+                                text-decoration: underline;
+                            }
+                            span {
+                                display: block;
+                                height: 21px;
+                                color: #EC595C;
+                                border-bottom: 1px solid #EAEAEA;
+                                i {
+                                    font-size: 16px;
+                                    font-weight: bold;
+                                    line-height: 20px;
+                                }
+                                em {
+                                    height: 16px;
+                                }
+                            }
+                        }
+                    }
+                    .others_right {
+                        float: right;
+                        width: 958px;
+                        height: 100%;
+                        background: greenyellow;
+                        border: 1px solid #EAEAEA;
+                        .others_right_tit{
+                            width: 958px;
+                            height: 56px;
+                            background: #F6F6F6;
+                            font-size: 16px;
+                            .others_right_tit1{
+                                width: 158px;
+                                height: 54px;
+                                border-right: 1px solid #EAEAEA;    
+                                text-align: center;
+                                line-height: 54px;
+                                color: #666666;
+                                float: left;
+                                >span{
+                                    color: #EC595C;
+                                }
+                            }
+                            .others_right_tit1:hover{
+                                cursor: pointer;
+                                 color: #EC595C;
+                            }
+                            .others_right_tit2{
+                                float: right;
+                                width: 109px;
+                                padding-left: 20px;
+                                height: 54px;
+                                margin-right: 22px;
+                                text-align: center;
+                                line-height: 56px;
+                                color: #666666; 
+                                padding-right: 45px;
+                                background: url(../img/goods_dec_img/purchase.png) no-repeat -452px -87px;
+                            }
+                            .others_right_tit2:hover{
+                                cursor: pointer;
+                                background: url(../img/goods_dec_img/purchase.png) no-repeat -452px -160px;
+                            }
+                        }
+                    }
+                }
+            }

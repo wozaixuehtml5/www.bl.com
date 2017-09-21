@@ -1,0 +1,157 @@
+$width_up:100%;
+$width:950px;
+$border:#E1DFDA;
+
+
+body{
+   
+}
+.login_header_up{
+    width:$width_up;
+    height: 110px;
+    .login_header{
+        width: $width;
+        margin: 0 auto;
+        text-align: center;
+        img{
+            float: left;
+            padding-top: 29px;
+        }
+    }
+}
+.login_main_up{
+    width: $width_up;
+    height: 483px;
+    padding: 30px 0 25px 0;
+    .login_main{
+        width: 1423px;
+        height: 100%;
+        background: url(../img/login_img/login-body.jpg) no-repeat;
+        .login_page{
+            width: 488px;
+            height: 471px;
+            border: 6px solid #E2E2E2;
+            margin: 0 auto;
+            background: white;
+            .login_1{
+                width: 300px;
+                margin: 0 auto;
+                padding-top: 45px;
+                p{
+                    height: 50px;
+                    width: 300px;
+                    margin-bottom: 5px;
+                    span{
+                        float: left;
+                        line-height: 50px;
+                        font-size: 18px;
+                    }
+                    >a{
+                        float: right;
+                        color: #0088CC;
+                        line-height: 50px;
+                    }
+                    >a:hover{
+                        text-decoration: underline;
+                    }
+                }
+                form input{
+                    width: 250px;
+                    height: 32px;
+                    padding: 0 11px 0 34px;
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                    border: 1px solid #CCCCCC;
+                }
+                .login_a:hover{
+                    text-decoration: none;
+                }
+                input::-moz-placeholder{
+                    font-size: 12px;
+                }
+                >a{
+                    float: right;
+                    color: #666666;
+                    padding-bottom: 10px;
+                    padding-top: 10px;
+                }
+                >a:hover{
+                    color: #0088CC;
+                    text-decoration: underline;
+                }
+                .login_btn{
+                    width: 300px;
+                    height: 36px;
+                    font-size: 18px;
+                    color: white;
+                    background: #E6133C;
+                    line-height: 36px;
+                    text-align: center;
+                    letter-spacing: 3px;
+                }
+                .login_btn:hover{
+                    background: #FA2244;
+                }
+                .bailian{
+                    line-height: 50px;
+                    img{
+                        padding-top: 20px;
+                        padding-right: 4px;
+                    }
+                }
+                .other{
+                    float: left;
+                    color: #999999;
+                    width:300px;
+                    a{
+                        display: block;
+                        float:left;
+                        width: 66px;
+                        height: 22px;
+                        margin: 0 0 10px 30px;
+                    }
+                    .login_a_1{
+                        background: url(../img/login_img/login-cion-1.png) left -22px;
+                    }
+                     .login_a_1:hover{
+                        background: url(../img/login_img/login-cion-1.png) left 0px;
+                     }
+                    .login_a_2{
+                        background: url(../img/login_img/login-cion-2.png) left -22px;
+                    }
+                     .login_a_2:hover{
+                        background: url(../img/login_img/login-cion-2.png) left 0px;
+                     }
+                    .login_a_3{
+                        background: url(../img/login_img/login-cion-3.png) left -22px;
+                    }
+                     .login_a_3:hover{
+                        background: url(../img/login_img/login-cion-3.png) left 0px;
+                     }
+                    .login_a_4{
+                        background: url(../img/login_img/login-cion-4.png) left -22px;
+                    }
+                     .login_a_4:hover{
+                        background: url(../img/login_img/login-cion-4.png) left 0px;
+                     }
+                    .login_a_5{
+                        background: url(../img/login_img/login-cion-5.png) left -22px;
+                    }
+                     .login_a_5:hover{
+                        background: url(../img/login_img/login-cion-5.png) left 0px;
+                     }
+                     
+                    fieldset{
+                        legend{
+                            align: center;
+                        }
+                        padding:20px 0 0 0;
+                        border-left: none;
+                        border-right: none;
+                        border-bottom: none;
+                    }
+                }
+            }
+        }
+    }
+}
