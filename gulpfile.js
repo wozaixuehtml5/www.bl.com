@@ -46,6 +46,13 @@ gulp.task("webserver",function(){
 						pathRewrite:{
 							"api":''
 						}
+					}),
+					proxy("/inpin",{
+						target:'http://m.ingping.com',
+						changeOrigin:true,
+						pathRewrite:{
+							"inpin":''
+						}
 					})
 				]
 			})

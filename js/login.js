@@ -11,6 +11,10 @@ require(["../minjs/common_js/config"], function() {
 				for(var val in users){
 					if(users[val].username==username){
 						if(users[val].password==pas){
+							users[val].user_self=true;
+							Cookie.set("user",JSON.stringify(users),2,"/");
+							is_pass=true;
+							break;
 						}else{
 							is_pass=false;
 						}
@@ -19,7 +23,13 @@ require(["../minjs/common_js/config"], function() {
 					}
 				}
 				if(is_pass){
-					user_self=username;
+					window.user_self=username;
+					alert("恭喜你！登陆成功了！")
+					log(users)
+					log(Cookie.get("user"))
+					$(".login_a").attr("href","../index.html")
+				}else{
+					alert("很遗憾，你登录失败了！");
 				}
 			})
 		})

@@ -2,16 +2,14 @@ require(["../minjs/common_js/config"], function() {
 	require(["jquery", "common"], function($) {
 		$("#footer_load").load("footer.html");
 		$(function() {
-			log("haha");
 			var inputs = document.getElementsByTagName("input");
 			var username = inputs[0];
 			var password = inputs[1];
 			var psdcon = inputs[2];
 			var email = inputs[6];
-			var name = inputs[4];
+			var duanxin = inputs[5];
 			var phoneNum = inputs[3];
 			var codeStr = inputs[4]
-//			log(is_pass)
 			var input_tit=$(".input-left");
 			username.oninput = function() {
 				var usernamevalue = inputs[0].value;
@@ -21,7 +19,6 @@ require(["../minjs/common_js/config"], function() {
 					$(".username").find(input_tit).find("span").addClass("glyphicon-remove").removeClass("glyphicon-ok");
 					$(".username").addClass("has-error").removeClass("has-success");
 					$(".username").find("input").attr("is_pass",false);
-					log($(".username").find(input_tit))
 				} else{
 					for(var i = 0; i < usernamevalue.length; i++) {
 						if(/[^\w]+/.test(usernamevalue)) {
@@ -116,17 +113,34 @@ require(["../minjs/common_js/config"], function() {
 					$(".phone_num").find("input").attr("is_pass",true);
 				}
 			}
-//			codeStr.onblur = function() {
-////				var code = codeStr.value;
-////				var pic = document.getElementById("picts");
-////				var picindex = pic.src.slice(-8, -4);
-////				if(!(picindex.toLowerCase() == code.toLowerCase())) {
-////					log("给我老老实实输验证码！");
-////				}
-//			}
-
+			
+			
+			//邮箱判断
+			email.onblur=function(){
+				if(/^(\w)+(\.\w+)*@(\w)+((\.\w+)+)$/.test(email.value)){
+					$(email).attr("is_pass",true);
+				}
+			}
+			//验证码验证
+			duanxin.onblur=function(){
+				if(duanxin.value!=null){
+					$(duanxin).attr("is_pass",true);
+				}
+			}
+			
+			//短信验证码
+			codeStr.onblur=function(){
+				if(codeStr.value!=null){
+					$(codeStr).attr("is_pass",true);
+				}
+			}
+			
+			
+			//同意条款事件
+			var is_tongyitiaokuan=false;
 			$(".ok_dec").click(function(){
 				$(this).find(".check_con").toggleClass("check_con_2");
+				is_tongyitiaokuan=true;
 			})
 			
 			//所有注册用户都保存在info_arr数组中
@@ -140,22 +154,29 @@ require(["../minjs/common_js/config"], function() {
 				var pass_con=true;
 				for(var i=0;i<inputs.length;i++ ){
 					if(inputs[i].getAttribute("is_pass")==null){
-						continue;
+						pass_con= false;
 					}
-					if(!inputs[i].getAttribute("is_pass")){
+					if(inputs[i].getAttribute("is_pass")=="false"){
 						pass_con= false;
 						break;
 					}
 				}
-				if(pass_con){
+				log(pass_con)
+				log(is_tongyitiaokuan)
+				if(pass_con&&is_tongyitiaokuan){
 					var info={
 						"username":inputs[0].value,
 						"password":inputs[1].value,
 						"phone_num":inputs[3].value,
-						"email":inputs[6].value
+						"email":inputs[6].value,
+						"user_self":false,
+						"shop_goods":{}
 					}
 					info_arr.push(info);
 					Cookie.set("user",JSON.stringify(info_arr),2,"/");
+					$(".ok_btn").parent().attr("href","login.html")
+				}else{
+					alert("请正确输入信息！");
 				}
 			})
 		})

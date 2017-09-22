@@ -300,6 +300,7 @@
                             height: 27px;
                             padding: 5px 0;
                             float: left;
+                            position: relative;
                             >span {
                                 width: 50px;
                                 height: 22px;
@@ -316,14 +317,25 @@
                                 position: relative;
                                 line-height: 25px;
                                 color: #333333;
-                                position: relative;
-                                .citys_lists{
+                                >i {
+                                    width: 9px;
+                                    height: 5px;
+                                    position: absolute;
+                                    right: 3px;
+                                    top: 10px;
+                                    background: url(../img/goods_dec_img/purchase.png) no-repeat -598px -113px;
+                                }
+                            }
+                            .citys:hover{
+                                cursor: pointer;
+                            }
+                            .citys_lists{
                                     width: 360px;
                                     padding: 10px;
                                     border: 1px solid #DDDDDD;
                                     position: absolute;
-                                    top: 26px;
-                                    left: 0;
+                                    top: 31px;
+                                    left: 85px;
                                     background: white;
                                     z-index: 1;
                                      border-radius: 1px;
@@ -379,18 +391,6 @@
                                         
                                     }
                                 }
-                                >i {
-                                    width: 9px;
-                                    height: 5px;
-                                    position: absolute;
-                                    right: 3px;
-                                    top: 10px;
-                                    background: url(../img/goods_dec_img/purchase.png) no-repeat -598px -113px;
-                                }
-                            }
-                            .citys:hover{
-                                cursor: pointer;
-                            }
                             >a {
                                 float: left;
                                 width: 36px;
@@ -578,8 +578,11 @@
                                     margin-right: 2px;
                                     font-weight: bold;
                                 }
+                                .a_red{
+                                    color:#EA5558;
+                                }
                                 .a_blue {
-                                    color: #51B8F1;
+                                    color: #EA5558;
                                     font-weight: normal;
                                 }
                             }
@@ -609,7 +612,7 @@
                 }
                 .recommend_goods {
                     width: 1190p;
-                    height: 274px;
+                    height: 300px;
                     clear: both;
                     position: relative;
                     margin-top: 20px;
@@ -618,7 +621,7 @@
                         position: absolute;
                         left: 0;
                         top: 0;
-                        height: 274px;
+                        height: 300px;
                         width: 2380px;
                     }
                     dl {
@@ -666,12 +669,12 @@
                 }
                 .others {
                     width: 1190px;
-                    height: 11549px;
-                    margin: 25px 0;
-                    margin: 0 auto;
+//                  height: 11549px;
+                    margin: 25px auto;
+//                  padding-bottom: 30px;
                     .others_left {
                         width: 208px;
-                        height: 11481px;
+                        height: 100%;
                         float: left;
                         border: 1px solid #EAEAEA;
                         .others_left_tit {
@@ -729,14 +732,20 @@
                     .others_right {
                         float: right;
                         width: 958px;
-                        height: 100%;
-                        background: greenyellow;
                         border: 1px solid #EAEAEA;
+                        .others_right_goods_dec{
+                            width: 920px;
+                            margin: 0 auto;
+                            >ul>li{
+                                text-align: left;
+                            }
+                        }
                         .others_right_tit{
                             width: 958px;
                             height: 56px;
                             background: #F6F6F6;
                             font-size: 16px;
+                            border-bottom: 1px solid #EAEAEA;
                             .others_right_tit1{
                                 width: 158px;
                                 height: 54px;
@@ -748,6 +757,12 @@
                                 >span{
                                     color: #EC595C;
                                 }
+                            }
+                            .others_right_tit_active{
+                                color: #EC595C;
+                                background: white;
+                                height: 55px;
+                                border-bottom: 2px solid  white;
                             }
                             .others_right_tit1:hover{
                                 cursor: pointer;
@@ -763,11 +778,201 @@
                                 line-height: 56px;
                                 color: #666666; 
                                 padding-right: 45px;
+                                position: relative;
                                 background: url(../img/goods_dec_img/purchase.png) no-repeat -452px -87px;
+                                .others_right_tit2_lists{
+                                    display: none;
+                                    position: absolute;
+                                    left: 0;
+                                    top: 54px;
+                                    background: white;
+                                    width: 174px;
+                                    text-align: center;
+                                    height: 150px;
+                                    img{
+                                        
+                                        vertical-align: middle;
+                                    }
+                                    span{
+                                        width: 0;
+                                        height: 100%;
+                                        display: inline-block;
+                                        vertical-align: middle;
+                                    }
+                                }
                             }
                             .others_right_tit2:hover{
+                                .others_right_tit2_lists{
+                                    display: block;
+                                }
                                 cursor: pointer;
-                                background: url(../img/goods_dec_img/purchase.png) no-repeat -452px -160px;
+                                
+                                background:white url(../img/goods_dec_img/purchase.png) no-repeat -452px -160px;
+                            }
+                        }
+                        .others_right_comment{
+                            padding-top: 20px;
+                            text-align: center;
+                            >ul{
+                                width: 920px;
+                                display: inline-block;
+                                margin-top: 10px;
+                                margin-bottom: 10px;
+                                >li{
+                                    text-align: left;
+                                }
+                            }
+                        }
+                        .goods_par{
+                            margin: 20px;
+                            border: 1px solid #eee;
+                            tbody{
+                                width: 920px;
+                                border: 1px solid #eee;
+                                border-top: none;
+                                text-align: left;
+                                th{
+                                    background: #F9F9F9;
+                                    width: 895px;
+                                    height: 36px;
+                                    line-height: 36px;
+                                    padding-left: 25px;
+                                    font-weight: bold;
+                                    border-bottom: 1px solid #eee;
+                                }
+                                td:nth-child(2n-1){
+                                    padding-left: 25px;
+                                    width: 225px!important;
+                                    height: 38px;
+                                    line-height: 18px;
+                                    border-right: 1px solid #eee;
+                                }
+                                td:nth-child(1){
+                                    border-bottom: 1px solid #eee;
+                                }
+                                td:nth-child(2){
+                                    border-bottom: 1px solid #eee;
+                                }
+                                td:nth-child(2n){
+                                     padding-left: 25px;
+                                      line-height: 18px;
+                                }
+                            }
+                        }
+                        .user_comment_tit{
+                            width: 958px;
+                            border-bottom: 1px solid #eee;
+                            float: left;
+                            height: 49px;
+                            background: #F6F6F6;
+                        }
+                        .comment_page_limit{
+                            max-height: 1430px;
+                            float: left;
+                            width: 958px;
+                            overflow: hidden;
+                        }
+                        .user_comment_pages{
+                            width: 960px;
+                            height: 26px;
+                            padding-top: 20px;
+                            ul{
+                                float: right;
+                                li{
+                                    float: left;
+                                    height: 24px;
+                                    width: 24px;
+                                    border: 1px solid #eee;
+                                    text-align: center;
+                                    line-height: 24px;
+                                }
+                                .page_li_active{
+                                    color: white;
+                                    background: #EC595C;
+                                    border: 1px solid #EC595C;
+                                }
+                            }
+                            
+                        }
+                        .user_comment{
+                            padding-top: 15px;
+                            border-top: 1px solid #eee;
+                            overflow: hidden;
+                            width: 958px;
+                            height: 122px;
+                            .user_tou{
+                                float: left;
+                                width: 100px;
+                                height: 106px;
+                                text-align: center;
+                                .user_img{
+                                    width: 46px;
+                                    height: 46px;
+                                }
+                            }
+                            .user_rate{
+                                width: 840px;
+                                height: 28px;
+                                margin: 3px 0 5px 0;
+                                float: left;
+                                li{
+                                    float: left;
+                                    width: 16px;
+                                    height: 20px;
+                                    margin-top: 2px;
+                                    background: url(../img/goods_dec_img/review-stars.png) no-repeat -4px -5px;
+                                }
+                            }
+                            .user_con{
+                                width: 690px;
+                                height: 50px;
+                                float: left;
+                                text-align: left;
+                            }
+                            .comment_date{
+                                width: 100px;
+                                height: 18px;
+                                padding: 10px 0;
+                                float: right;
+                            }
+                        }
+                        .shop_service{
+                            .shop_service_tit{
+                                width: 888px;
+                                height: 35px;
+                                margin: 0 auto;
+                                background: #F9F9F9;
+                                border: 1px solid #EEEEEE;
+                                padding-left: 30px;
+                                line-height: 34px;
+                                font-weight: bold;
+                                border-bottom: none;
+                                text-align: left;
+                            }
+                            .shop_service_main{
+                                margin: 0 auto;
+                                width: 860px;
+                                height: 925px;
+                                padding: 21px 29px 24px 29px;
+                                border: 1px solid #EEEEEE;
+                                border-bottom: none;
+                                .p_tit{
+                                    line-height: 25px;
+                                    font-weight: bold;
+                                    margin-top: 33px;
+                                    height: 25px;
+                                    color: #555555;
+                                }
+                                .p_tit1{
+                                    margin-top: 0;
+                                }
+                                p{
+                                    color: #333333;
+                                    height: 22px;
+                                    line-height: 22px;
+                                    text-align: left;
+                                    overflow: hidden;
+                                }
                             }
                         }
                     }

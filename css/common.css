@@ -66,10 +66,11 @@ strong {
 
 #float_right {
   width: 38px;
-  height: 880px;
+  height: 100%;
   position: fixed;
   z-index: 99999999999;
-  right: 0;
+  right: -43px;
+  bottom: 0;
   top: 0;
   background: #333333;
   color: white;
@@ -96,8 +97,8 @@ strong {
   width: 38px;
   height: 40px;
   background: url(../img/main_img/sidebar_out.png) no-repeat 0px 0px;
-  margin-top: 120px;
-  position: relative;
+  position: absolute;
+  top: 12%;
   margin-bottom: 2px;
 }
 #float_right .float_right_1 p {
@@ -130,6 +131,9 @@ strong {
 #float_right .float_right_2_bottom_1 {
   width: 43px;
   height: 5px;
+  position: absolute;
+  bottom: -5px;
+  left: 5px;
   background: url(../img/main_img/border.png) no-repeat left bottom;
   margin-left: -5px;
 }
@@ -140,6 +144,9 @@ strong {
   border-top: 1px solid #666666;
   margin-left: -5px;
   border-bottom: 1px solid #666666;
+  position: absolute;
+  z-index: 3;
+  top: 18%;
 }
 #float_right .float_right_2 .float_right_2_top {
   width: 30px;
@@ -170,6 +177,9 @@ strong {
   width: 38px;
   height: 82px;
   margin-top: 10px;
+  position: absolute;
+  bottom: 38%;
+  z-index: 2;
 }
 #float_right .float_right_3 p {
   color: #333333;
@@ -212,6 +222,9 @@ strong {
   width: 38px;
   height: 122px;
   margin-top: 120px;
+  position: absolute;
+  z-index: 1;
+  bottom: 0px;
 }
 #float_right .float_right_4 p {
   color: #333333;
@@ -374,6 +387,7 @@ strong {
   padding: 9px 0 9px 10px;
   height: 407px;
   width: 180px;
+  z-index: 99999;
   background: #E6133C;
   position: relative;
   left: -16px;
@@ -414,6 +428,7 @@ strong {
   text-decoration: underline;
 }
 #float_header_up .float_header .float_header_left .left_lists .left_lists_img .banner_top_first_lists .banner_top_first_lists_divs {
+  z-index: 999;
   opacity: 0.8;
   display: none;
   position: absolute;
@@ -881,6 +896,7 @@ strong {
   height: 90px;
   background: #BFDEF7;
   overflow: hidden;
+  display: none;
 }
 #header_ad_up .header_ad {
   width: 1190px;
@@ -1044,6 +1060,7 @@ strong {
   height: 407px;
   width: 180px;
   background: #E6133C;
+  z-index: 99999;
   position: relative;
 }
 #banner_up .banner_top .banner_top_first .banner_top_first_lists > li {

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../css/shop.css" />
+		<script src="../js/require.js" data-main="../js/shop_car.js"></script>
+		<title></title>
+		<script type="text/html" id="temp_city">
+			<ul>
+				<% for(var val in data){ %>
+				<li><a href="###"><%= data[val] %></a></li>
+				<% } %>
+			</ul>
+		</script>
+		<script type="text/html" id="shop_goods"> 
+			<tr>
+					<td><div class="select">
+						<img src="../img/shop_img/select.png"/>
+					</div>全选</td>
+					<td>商品信息</td>
+					<td>单价（元）</td>
+					<td>件数</td>
+					<td>金额（元）</td>
+					<td>操作</td>
+				</tr>
+				<% for(var val in data){ %>
+				<tr>
+					<td colspan="2" class="select_to">
+						<div class="select">
+							<span></span>
+							<img src="../img/shop_img/select.png"/>
+						</div>
+						<div class="shop_goods_dec">
+							<a href="###"><img src="../img/shop_img/1914134739_360x360.jpg"/></a>
+							<a href="###" class="shop_goods_dec_txt">索尼（SONY）55英寸 KD-55X9000E 4K超高清fawef4K超高清fawef4K超高清fawef4K超高清fawef4K超高清fawefawefaf.</a>
+						</div>
+					</td>
+					<td class="price_sin">￥<span>7499.0</span></td>
+					<td>
+						<div class="shop_goods_num">
+							<div class="shop_goods_num_del">
+								-
+							</div>
+							<div class="shop_goods_num_center">
+								0
+							</div>
+							<div class="shop_goods_num_add">
+								+
+							</div>
+						</div>
+					</td>
+					<td class="price_total">￥<span>7499.0</span></td>
+					<td>
+						<ul>
+							<li  class="collect"><a href="###"> 移入收藏夹</a></li>
+							<li class="del"><a href="###"> 删除</a></li>
+						</ul>
+					</td>
+				</tr>
+				<% } %>
+		</script>
+	</head>
+
+	<body>
+		<div id="header_up">
+			<div id="header">
+				<div class="bl-name" title="百联集团旗下全渠道电商平台">
+					百联集团旗下全渠道电商平台
+				</div>
+				<b></b>
+				<div class="header_left header_lists_con">
+					<div class="header_left_nav  ">
+						<a href="###">网站导航</a>
+						<li></li>
+					</div>
+					<div class="tianchong">
+
+					</div>
+					<dl class="header_left_lists ">
+						<dd>
+							<a href="####">百联集团官网</a>
+						</dd>
+						<dd>
+							<a href="####">支付宝网</a>
+						</dd>
+						<dd>
+							<a href="####">第一医药</a>
+						</dd>
+						<dd>
+							<a href="####">OK会员卡专区</a>
+						</dd>
+					</dl>
+				</div>
+				<div class="header_center">
+					<a href="###">信息</a>
+				</div>
+				<div class="header_right">
+					<ul>
+						<li>
+							<a href="###" class="login">
+								<p></p>
+								请登录
+							</a>
+							<a href="reg.html" class="reg">
+								注册
+							</a>
+						</li>
+						<li>
+							<a href="###">我的订单</a>
+						</li>
+						<li class="header_right_haslists header_lists_1 header_lists_con">
+							<a href="###">我的百联</a>
+							<span></span>
+							<div class="tianchong">
+
+							</div>
+							<ul>
+								<li>
+									<a href="###">我的订单</a>
+								</li>
+								<li>
+									<a href="###">我的评分</a>
+								</li>
+								<li>
+									<a href="###">我的积分</a>
+								</li>
+								<li>
+									<a href="###">我的收藏</a>
+								</li>
+								<li>
+									<a href="###">我的优惠券</a>
+								</li>
+							</ul>
+						</li>
+						<li class="header_right_haslists header_lists_2 header_lists_con">
+							<a href="###">充值缴费</a>
+							<span></span>
+							<div class="tianchong">
+
+							</div>
+							<div>
+								<ul>
+									<li class="header_right_list_first">
+										<a href="###">影娱生活</a>
+									</li>
+									<li>
+										<a href="###">咪咕电影卡</a>
+									</li>
+								</ul>
+								<ul>
+									<li class="header_right_list_first">
+										<a href="###">水电煤缴费</a>
+									</li>
+									<li>
+										<a href="###">缴费首页</a>
+									</li>
+									<li>
+										<a href="###">水费缴费</a>
+									</li>
+									<li>
+										<a href="###">电费缴费</a>
+									</li>
+									<li>
+										<a href="###">燃气缴费</a>
+									</li>
+								</ul>
+								<ul>
+									<li class="header_right_list_first">
+										<a href="###">手机充值</a>
+									</li>
+									<li>
+										<a href="###">手机充值</a>
+									</li>
+									<li>
+										<a href="###">流量充值</a>
+									</li>
+									<li>
+										<a href="###">更多充值</a>
+									</li>
+								</ul>
+								<ul>
+									<li class="header_right_list_first">
+										<a href="###">其他缴费</a>
+									</li>
+									<li>
+										<a href="###">固话/宽带充值</a>
+									</li>
+									<li>
+										<a href="###">铁通缴费</a>
+									</li>
+									<li>
+										<a href="###">有线电视缴费</a>
+									</li>
+								</ul>
+								<ul>
+									<li class="header_right_list_first">
+										<a href="###">游戏点卡</a>
+									</li>
+									<li>
+										<a href="###">腾讯Q币充值</a>
+									</li>
+									<li>
+										<a href="###">盛大点券充值</a>
+									</li>
+									<li>
+										<a href="###">游戏中心</a>
+									</li>
+									<li>
+										<a href="###">更多游戏</a>
+									</li>
+								</ul>
+								<ul>
+									<li class="header_right_list_first">
+										<a href="###">其他险种</a>
+									</li>
+									<li>
+										<a href="###">车险</a>
+									</li>
+								</ul>
+							</div>
+							</a>
+						</li>
+						<li class="header_right_haslists header_lists_1 header_lists_con">
+							<a href="###">客服服务</a>
+							<span></span>
+							<div class="tianchong">
+
+							</div>
+							<ul>
+								<li>
+									<a href="###">在线客服</a>
+								</li>
+								<li>
+									<a href="###">帮助中心</a>
+								</li>
+							</ul>
+						</li>
+						<li class="header_right_haslists header_lists_4 header_lists_con">
+							<a href="###">掌上百联</a>
+							<span></span>
+							<div class="tianchong">
+
+							</div>
+							<div>
+								<img src="../img/header_img/weixincode.jpg" />
+								<p>!百联APP</p>
+								<p><strong>手机购物更方便</strong></p>
+							</div>
+						</li>
+						<li>
+							<a href="###">购物车</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="shop_header_up">
+			<div class="shop_header">
+				<img src="../img/shop_img/logon-logo.png" />
+				<h2>购物车</h2>
+				<p></p>
+			</div>
+		</div>
+		<div id="shop_main">
+			<div class="shop_main_top">
+				<div class="all_goods">
+					全部商品<span>1</span>
+				</div>
+				<div class="goods_dis">
+					<p>配送至</p>
+					<div class="deliver">
+						<div class="citys">
+							<em>上海黄浦区</em>
+							<i></i>
+						</div>
+						<div class="citys_lists">
+							<div class="citys_tit">
+								<ul>
+									<li>省份</li>
+									<li>城市</li>
+									<li class="citys_tit_3">县区</li>
+								</ul>
+							</div>
+							<div class="citys_main">
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<table cellspacing="0" class="shop_table">
+				<tr>
+					<td><div class="select">
+						<img src="../img/shop_img/select.png"/>
+					</div>全选</td>
+					<td>商品信息</td>
+					<td>单价（元）</td>
+					<td>件数</td>
+					<td>金额（元）</td>
+					<td>操作</td>
+				</tr>
+				<tr>
+					<td colspan="2" class="select_to">
+						<div class="select">
+							<span></span>
+							<img src="../img/shop_img/select.png"/>
+						</div>
+						<div class="shop_goods_dec">
+							<a href="###"><img src="../img/shop_img/1914134739_360x360.jpg"/></a>
+							<a href="###" class="shop_goods_dec_txt">索尼（SONY）55英寸 KD-55X9000E 4K超高清fawef4K超高清fawef4K超高清fawef4K超高清fawef4K超高清fawefawefaf.</a>
+						</div>
+					</td>
+					<td class="price_sin">￥<span>7499.0</span></td>
+					<td>
+						<div class="shop_goods_num">
+							<div class="shop_goods_num_del">
+								-
+							</div>
+							<div class="shop_goods_num_center">
+								0
+							</div>
+							<div class="shop_goods_num_add">
+								+
+							</div>
+						</div>
+					</td>
+					<td class="price_total">￥<span>7499.0</span></td>
+					<td>
+						<ul>
+							<li  class="collect"><a href="###"> 移入收藏夹</a></li>
+							<li class="del"><a href="###"> 删除</a></li>
+						</ul>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<div id="footer_load"></div>
+	</body>
+
+</html>

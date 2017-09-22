@@ -289,3 +289,45 @@ function changeBackground(obj, interval) {
 function randomColor(){
 	return "rgba(" + randomInt(0,255) + "," + randomInt(0,255) + "," + randomInt(0,255) + "," + 1 + ")";
 }
+
+//自定义动画
+function animation(obj, target, time,cb) {
+	if(!!obj.t){
+		clearInterval(obj.t);
+	}
+//	log("清除本元素的上个动画事件")
+	var _obj = {};
+	var cb=!!cb?cb:function(){};
+	for(var val in target) {
+		if(val == "opacity") {
+			_obj[val] = parseInt(getStyle(obj, val));
+		} else if(val=="transform"){
+			_obj[val]="scale(1)";
+		}else{
+			_obj[val] = parseInt(getStyle(obj, val));
+		}
+	}
+	var deg = 0;
+	obj.t = setInterval(
+		function() {
+			for(var val in _obj) {
+				if(val == "opacity") {           //渐变的是透明度
+					obj.style[val] = +_obj[val] + (target[val] - _obj[val]) * Math.sin(deg * Math.PI / 180);
+				} else if(val=="transform"){                    //渐变的是大小 scale
+					var index_left=target[val].indexOf("(");
+					var index_right=target[val].indexOf(")");
+					var target_scale=target[val].slice(index_left+1,index_right);
+					var cha=target_scale-1;
+					obj.style[val]="scale("+(cha>=0?1+ cha*Math.sin(deg*Math.PI/180):1- cha*Math.sin(deg*Math.PI/180))+ ")";
+				}else{
+					obj.style[val] = _obj[val] + (parseInt(target[val]) - _obj[val]) * Math.sin(deg * Math.PI / 180) + "px";
+				}
+			}
+			deg++;
+			if(deg > 90) {
+				clearInterval(obj.t);
+				cb();
+			}
+		}, time / 90)
+}
+

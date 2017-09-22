@@ -363,6 +363,17 @@
   cursor: pointer;
   background: url(../img/main_img/barnav.png) no-repeat -45px -287px;
 }
+#main_up .main #float_left .float_left_9 {
+  height: 40px;
+  width: 40px;
+  background: url(../img/main_img/barnav.png) no-repeat 0 -328px;
+  overflow: hidden;
+  margin-bottom: 1px;
+}
+#main_up .main #float_left .float_left_9:hover {
+  cursor: pointer;
+  background: url(../img/main_img/barnav.png) no-repeat -45px -328px;
+}
 #main_up .main ::-webkit-scrollbar {
   width: 12px;
 }
@@ -635,6 +646,8 @@
 }
 #main_up .main_bottom .main_bottom_con1_1 dl dt img {
   vertical-align: middle;
+  width: 200px;
+  height: 200px;
 }
 #main_up .main_bottom .main_bottom_con1_1 dl dt span {
   width: 0;

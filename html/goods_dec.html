@@ -1,72 +1,110 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="UTF-8">
-		<link rel="stylesheet" type="text/css" href="../css/common.css"/>
-		<link rel="stylesheet" type="text/css" href="../css/goods_dec.css"/>
-		<script  src="../js/require.js" data-main="../js/goods_dec.js"></script>
+		<link rel="stylesheet" type="text/css" href="../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../css/goods_dec.css" />
+		<script src="../js/require.js" data-main="../js/goods_dec.js"></script>
 		<title></title>
 	</head>
+
 	<body>
-		<div id="header_load"></div>  
+		<div id="header_load"></div>
 		<script type="text/javascript">
-			var req=new XMLHttpRequest;
-			req.open("get","http://localhost:8000/html/header.html",false);
+			var req = new XMLHttpRequest;
+			req.open("get", "http://localhost:8000/html/header.html", false);
 			req.send();
-			var header=document.getElementById("header_load");
-			header.innerHTML=req.response;
+			var header = document.getElementById("header_load");
+			header.innerHTML = req.response;
 		</script>
-//		<script type="text/html" id="temp_city">
+		<script type="text/html" id="temp_goods_lists">
+			<% for(var val in data) { %>
+			<dl>
+				<dt><a href="###"><img src="<%= data[val].src %>"/></a></dt>
+				<a href="###">
+					<dd>
+						<%= data[val].goods_sales_name %>
+					</dd>
+				</a>
+				<span><em>￥</em><i><%= data[val].sale_price %></i></span>
+			</dl>
+			<% } %>
+		</script>
+		<script type="text/html" id="user_comment">
+			<% for(var val in data) { %>
+				<div class="user_comment">
+					<div class="user_tou">
+						<img src="../img/goods_dec_img/v4-face.png"/>
+						<p><%= data[val].userName %></p>
+					</div>
+					<div class="user_rate">
+						<ul>
+							<% for(var i=0;i<data[val].rating;i++) { %>
+								<li></li>
+							<% } %>
+						</ul>
+					</div>
+					<div class="user_con">
+						<%= data[val].content %>
+					</div>
+					<div class="comment_date">
+						<%= data[val].createDate %>
+					</div>
+				</div>
+			<% } %>
+		</script>
+		<script type="text/html" id="temp_city">
 			<ul>
 				<% for(var val in data){ %>
 				<li><a href="###"><%= data[val] %></a></li>
 				<% } %>
 			</ul>
 		</script>
-		
+
 		<div id="goods_main_up">
 			<div class="goods_main">
 				<div class="goods_index">
 					<div class="goods_lists">
-						
+
 					</div>
 					<div class="goods_icon">
-						
+
 					</div>
 				</div>
 				<div class="goods_detail">
 					<div class="goods_display">
 						<div class="goods_display_top">
 							<span></span>
-								<img src="../img/goods_dec_img/1914134739_360x360.jpg"/>
+							<img src="../img/goods_dec_img/1914134739_360x360.jpg" />
 							<div class="cursor">
-								
+
 							</div>
 							<div class="mag">
-								<img src="../img/goods_dec_img/1914134739_360x360.jpg"/>
+								<img src="../img/goods_dec_img/1914134739_360x360.jpg" />
 							</div>
 						</div>
 						<div class="goods_display_thumbnail">
 							<div class="goods_display_img">
 								<span></span>
-								<img src="../img/goods_dec_img/1914134739_360x360.jpg"/>
+								<img src="../img/goods_dec_img/1914134739_360x360.jpg" />
 							</div>
 							<div class="goods_display_img">
 								<span></span>
-								<img src="../img/goods_dec_img/1943414692_360x360.jpg"/>
+								<img src="../img/goods_dec_img/1943414692_360x360.jpg" />
 							</div>
 							<div class="goods_display_img">
 								<span></span>
-								<img src="../img/goods_dec_img/1691526191_200x200.jpg"/>
+								<img src="../img/goods_dec_img/1691526191_200x200.jpg" />
 							</div>
 							<div class="goods_display_img">
 								<span></span>
-								<img src="../img/goods_dec_img/1392783968_360x360.jpg"/>
+								<img src="../img/goods_dec_img/1392783968_360x360.jpg" />
 							</div>
 						</div>
 						<div class="goods_share">
 							<div class="share">
-								
+
 							</div>
 							<p>商品编号 302010006373</p>
 						</div>
@@ -76,12 +114,14 @@
 							索尼（SONY）55英寸 KD-55X9000E 4K超高清智能LED液晶电视 安卓6.0系统 X1芯片 HDR液晶电视
 						</p>
 						<p class="goods_subtit">
-							【先领券后下单,享6799元好价！每天限量1000张券,手慢无】4K HDR图像处理芯片X1 精锐光控Pro标准版 4K迅锐图像处理引擎PRO 特丽魅彩显示技术<a href="###">索尼55英寸4K电视+PS4 Pro居然只要9498元！限时！限时！限时！手慢无！</a>
+							【先领券后下单,享6799元好价！每天限量1000张券,手慢无】4K HDR图像处理芯片X1 精锐光控Pro标准版 4K迅锐图像处理引擎PRO 特丽魅彩显示技术
+							<a href="###">索尼55英寸4K电视+PS4 Pro居然只要9498元！限时！限时！限时！手慢无！</a>
 						</p>
 						<div class="goods_activity">
 							<div class="shangou">
-								
-							</div>距离活动结束还有:  <srong>10</srong>天  <strong>01</srong>小时 <strong> 48</srong>分  <strong>31</srong>秒  <a href="###">更多活动 ></a>
+
+							</div>距离活动结束还有: <strong>10</strong>天 <strong>01</strong>小时 <strong> 48</strong>分 <strong>31</strong>秒
+							<a href="###">更多活动 ></a>
 						</div>
 						<p class="goods_price"><span>活动价</span><strong><span>￥</span>7499.00</strong></p>
 						<div class="coupon">
@@ -103,17 +143,17 @@
 							<div class="citys">
 								<em>上海黄浦区</em>
 								<i></i>
-								<div class="citys_lists">
-									<div class="citys_tit">
-										<ul>
-											<li>省份</li>
-											<li>城市</li>
-											<li class="citys_tit_3">县区</li>
-										</ul>
-									</div>
-									<div class="citys_main">
-										
-									</div>
+							</div>
+							<div class="citys_lists">
+								<div class="citys_tit">
+									<ul>
+										<li>省份</li>
+										<li>城市</li>
+										<li class="citys_tit_3">县区</li>
+									</ul>
+								</div>
+								<div class="citys_main">
+
 								</div>
 							</div>
 							<a href="###">免运费</a>
@@ -124,7 +164,9 @@
 								<p>本产品由供应商提供发货，并由百联提供售后服务，下单后3-5个工作日内送达</p>
 								<ul>
 									<li>不支持到店自提</li>
-									<li class="li_2"><a href="###">支持7天无理由退货</a></li>
+									<li class="li_2">
+										<a href="###">支持7天无理由退货</a>
+									</li>
 									<li>不支持货到付款</li>
 								</ul>
 							</div>
@@ -149,8 +191,7 @@
 								立即购买
 							</div>
 							<div class="user_shop">
-								<i></i>
-								加入购物车
+								<i></i> 加入购物车
 							</div>
 							<div class="user_collect">
 								收藏
@@ -158,7 +199,7 @@
 						</div>
 						<div class="user_assess">
 							<span><em>99%</em>好评</span><i></i>
-							<span><a href="###">145</a>评价</span><i></i>
+							<span><a href="###" class="a_red">145</a>评价</span><i></i>
 							<span><a href="###" class="a_blue">评价返积分</a></span>
 						</div>
 					</div>
@@ -173,40 +214,51 @@
 					<div class="goods_lists">
 						<dl>
 							<dt><a href="###"><img src="../img/goods_dec_img/1502801368_200x200.jpg"/></a></dt>
-							<a href="###"><dd>
-								索尼（SONY）43英寸 KD-43X8000E 4K超高清智能LED液能LED液能LED液晶电
-							</dd></a>
+							<a href="###">
+								<dd>
+									索尼（SONY）43英寸 KD-43X8000E 4K超高清智能LED液能LED液能LED液晶电
+								</dd>
+							</a>
 							<span><em>￥</em><i>4499.0</i></span>
 						</dl>
 						<dl>
-							<dt><a href="###"><img src="../img/goods_dec_img/1502801368_200x200.jpg"/></a></dt>
-							<a href="###"><dd>
-								索尼（SONY）43英寸 KD-43X8000E 4K超高清智能LED液晶电
-							</dd></a>
-							<span><em>￥</em><i>4499.0</i></span>
+							<dt><a href="###"><img src="../img/goods_dec_img/SP_3020_302001470962_01_10006.jpg"/></a></dt>
+							<a href="###">
+								<dd>
+
+									索尼（SONY）32英寸 KDL-32W600D 高清智能网络LED液晶电视（G9+ 黑色版） 索尼（SONY）32英寸 KDL-32W600D 高清智能网络LED
+								</dd>
+							</a>
+							<span><em>￥</em><i>1798.0</i></span>
 						</dl>
 						<dl>
-							<dt><a href="###"><img src="../img/goods_dec_img/1502801368_200x200.jpg"/></a></dt>
-							<a href="###"><dd>
-								索尼（SONY）43英寸 KD-43X8000E 4K超高清智能LED液晶电
-							</dd></a>
-							<span><em>￥</em><i>4499.0</i></span>
+							<dt><a href="###"><img src="../img/goods_dec_img/SP_3020_302010001138_01_10006.jpg"/></a></dt>
+							<a href="###">
+								<dd>
+									西门子（Siemens）KM46FA90TI 452升 变频混冷无霜零度保鲜十字对开门冰箱 拉丝银 西门子（Siemens）KM46FA90TI 452升 变频混
+								</dd>
+							</a>
+							<span><em>￥</em><i>8499.0</i></span>
 						</dl>
 						<dl>
-							<dt><a href="###"><img src="../img/goods_dec_img/1502801368_200x200.jpg"/></a></dt>
-							<a href="###"><dd>
-								索尼（SONY）43英寸 KD-43X8000E 4K超高清智能LED液晶电
-							</dd></a>
-							<span><em>￥</em><i>4499.0</i></span>
+							<dt><a href="###"><img src="../img/goods_dec_img/690687760_200x200.jpg"/></a></dt>
+							<a href="###">
+								<dd>
+									索尼（SONY）75英寸 KD-75X9400E 4K超高清智能LED液晶电视 安卓6.0系统 X1芯片进阶版 HDR液晶电视 索尼（SONY）75英寸 KD-75X9400E 4K超高清智能LED
+								</dd>
+							</a>
+							<span><em>￥</em><i>25998.0</i></span>
 						</dl>
 						<dl class="">
-							<dt><a href="###"><img src="../img/goods_dec_img/1502801368_200x200.jpg"/></a></dt>
-							<a href="###"><dd>
-								索尼（SONY）43英寸 KD-43X8000E 4K超高清智能LED液晶电
-							</dd></a>
-							<span><em>￥</em><i>4499.0</i></span>
+							<dt><a href="###"><img src="../img/goods_dec_img/SP_3020_302001508475_01_10006.jpg"/></a></dt>
+							<a href="###">
+								<dd>
+									西门子（SIEMENS）KM48EA30TI 484升 变频混冷无霜多门冰箱 浅金色 西门子（SIEMENS）KM48EA30TI 484升 变频混冷无霜多门冰箱 浅金色
+								</dd>
+							</a>
+							<span><em>￥</em><i>5888.0</i></span>
 						</dl>
-						
+
 					</div>
 				</div>
 			</div>
@@ -217,16 +269,20 @@
 					</p>
 					<dl>
 						<dt><a href="###"><img src="../img/goods_dec_img/1691526191_200x200.jpg"/></a></dt>
-						<a href="###"><dd>
-							夏普（SHARP）40英寸 LCD-40SF466A-BK 全高清WIFI智能平板电视（黑色）
-							夏普（SHARP）40英寸 LCD-40SF466A-BK 全高清WIFI智能平
-						</dd></a>
+						<a href="###">
+							<dd>
+								夏普（SHARP）40英寸 LCD-40SF466A-BK 全高清WIFI智能平板电视（黑色） 夏普（SHARP）40英寸 LCD-40SF466A-BK 全高清WIFI智能平
+							</dd>
+						</a>
 						<span><em>￥</em><i>1698.0</i></span>
 					</dl>
+					<i class="others_left_goods">
+						
+					</i>
 				</div>
 				<div class="others_right">
 					<div class="others_right_tit">
-						<div class="others_right_tit1">
+						<div class="others_right_tit1 others_right_tit_active">
 							商品介绍
 						</div>
 						<div class="others_right_tit1">
@@ -240,13 +296,133 @@
 						</div>
 						<div class="others_right_tit2">
 							手机购买
+							<div class="others_right_tit2_lists">
+								<span></span>
+								<img src="../img/goods_dec_img/2017-09-21_120706.png" />
+							</div>
+						</div>
+					</div>
+					<div class="others_right_comment">
+						<div class="others_right_goods_dec">
+							<img src="../img/goods_dec_img/367980026.jpg" />
+							<ul>
+								<li>注意事项：</li>
+								<li>1.安装服务费用。索尼售后上门安装需要收取一定的安装服务费用，具体资费标准以售后人员上门提供的价格表为准，您也可以咨询索尼售后服务热线。</li>
+								<li>2. 索尼售后服务热线：400-810-9000！！！</li>
+								<li>3.请您对所购电视包装箱（包含箱内泡沫）保留30天或更长的时间，否则商品在15天内因质量问题发生退、换货时需要承担相应的包装材料费用或导致无法退换货。</li>
+								<li>4.请勿自行开箱。请务必联系索尼厂家工作人员上门开箱安装，切勿私自或委托他人开箱安装。</li>
+								<li>5.该厂家安装人员只对本品牌底座或挂架进行安装服务，非本品牌的底座或挂架，该厂家安装人员将不负责</li>
+							</ul>
+							<img src="../img/goods_dec_img/943168056.jpg" />
+						</div>
+						<div class="goods_par">
+							<table border="0" cellspacing="0" cellpadding="0">
+								<tbody>
+									<tr>
+										<th colspan="2">包裹清单</th>
+									</tr>
+									<tr>
+										<td>包裹清单</td>
+										<td>主机*1、保修卡*1、说明书*1、遥控器*1、底座*1</td>
+									</tr>
+								</tbody>
+								<tbody>
+									<tr>
+										<th colspan="2">主体</th>
+									</tr>
+									<tr>
+										<td>电视类型</td>
+										<td>智能电视,4K超高清电视</td>
+									</tr>
+								</tbody>
+								<tbody>
+									<tr>
+										<th colspan="2">产地</th>
+									</tr>
+									<tr>
+										<td>产地</td>
+										<td>中国</td>
+									</tr>
+									<tr>
+										<td>进口/国产</td>
+										<td>国产</td>
+									</tr>
+								</tbody>
+								<tbody>
+									<tr>
+										<th colspan="2">安装</th>
+									</tr>
+									<tr>
+										<td>是否需要安装</td>
+										<td>需要安装</td>
+									</tr>
+								</tbody>
+								<tbody>
+									<tr>
+										<th colspan="2">显示参数</th>
+									</tr>
+									<tr>
+										<td>尺寸</td>
+										<td>55英寸</td>
+									</tr>
+									<tr>
+										<td>分辨率</td>
+										<td>超高清</td>
+									</tr>
+								</tbody>
+								<tbody>
+									<tr>
+										<th colspan="2">规格参数</th>
+									</tr>
+									<tr>
+										<td>是否带底座</td>
+										<td>带底座</td>
+									</tr>
+								</tbody>
+
+							</table>
+						</div>
+						<!--售后-->
+						<div class="shop_service">
+							<div class="shop_service_tit">
+								售后服务
+							</div>
+							<div class="shop_service_main">
+								<p class="p_tit p_tit1">售后保障</p>
+								<p>本产品为原厂正品，享受正规国家三包服务，质保期：一年质保。 如产品有质量问题，请联系索尼售后开具故障检测报告， 凭故障检测报告提供7日内退货，15日内换货，15日以上在质保期内享受免费保修等三包服务！ 索尼售后服务电话：400-810-9000 品牌官方网站： http://www.sony.com.cn/</p>
+								<p class="p_tit">i百联承诺</p>
+								<p>i百联向您保证所售商品均为正品行货，请放心购买！ 如我们的商品不能让您满意，您可通过“帮助中心→售后服务→《退换货政策》”查询退换货相关规则及流程。</p>
+								<p class="p_tit_tebie">特别说明：</p>
+								<p>1、因厂家会在没有任何提前通知的情况下更改产品包装、产地或者一些附件，I百联不能确保客户收到的货物与商城图片、产地、附件说明完全一致。只能确保为原厂正货！并且保证与当时市场上同样主流新品一致。若本商城没有及时更新，请大家谅解！ 2、因拍摄灯光及不同显示器色差等原因造成商品图片与实物有色差，一切以实物为准。
+								</p>
+								<p class="p_tit">价格说明</p>
+								<p>i百联价：商品在i百联平台上，不参加降价让利促销团购等活动时的常规销售价格。 参考价：商品展示的参考价，可能是品牌专柜标价、商品吊牌价或由品牌供应商提供的正品零售价（如厂商指导价、建议零售价等）或该商品在i百联平台曾经展示过的销售价；由于地区、时间的差异性和市场行情波动，品牌专柜标价、商品吊牌价、销售商门店曾经展示过的销售价等可能会与您购物时展示的不一致，该价格仅供您参考。 折扣：如无特殊说明，折扣指销售商在原价、或参考价（如品牌专柜标价、商品吊牌价、厂商指导价、厂商建议零售价）等某一价格基础上计算出的优惠比例或优惠金额；如有疑问，您可在购买前联系销售商进行咨询。 异常问题：商品促销信息以商品详情页“促销”栏中的信息为准；商品的具体售价以订单结算页价格为准；如您发现活动商品售价或促销信息有异常，建议在购买前联系客服咨询。
+								</p>
+							</div>
+						</div>
+						<div class="user_comment_tit">
+							
+						</div>
+						<div class="comment_page_limit">
+							<div class="user_comment_parent">
+							</div>
+							<div class="user_comment_pages">
+								<ul>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		
-		
+
 		<div id="footer_load"></div>
 	</body>
+
 </html>
+

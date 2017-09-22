@@ -7,8 +7,10 @@ require(["config"], function() {
 			var main_con2=$(".main_con2");
 			var body=$("body")
 			$(barnavs).click(function(){
+//				log(123123)
 				var offset_top=$(main_con2).offset().top+$(this).index()*494-90;
 				$(body).animate({scrollTop:offset_top});
+//				log(!!$(body).animate({scrollTop:offset_top}))
 			});
 			
 			$(window).scroll(function(){
@@ -31,7 +33,6 @@ require(["config"], function() {
 				barnavs.eq(index).css("background","url(../img/main_img/barnav.png) no-repeat -45px "+(-index*41)+"px");
 				$(barnavs).on(
 					"mouseenter",function(){
-						log($(this))
 						$(this).css("background","url(../img/main_img/barnav.png) no-repeat -45px "+(-$(this).index()*41)+"px");
 					}
 //					"mouseleave",function(){

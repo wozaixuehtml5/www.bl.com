@@ -2,14 +2,44 @@ require(["config"], function() {
 	require(["jquery", "common_config","template_config","ajax_config"], function($) {
 		log("我是header，我被加载了")
 		$(function() {
-			
 			//定义用户名
-			var user_self="";
-			if(user_self!=""){
-				
-			} 
+			var users=JSON.parse(Cookie.get("user"));
+			for(var val in users){
+				if(users[val].user_self){
+					window.SELF=users[val].username;
+				}
+			}
+			if(!!window.SELF){
+				$(".login").text("你好："+window.SELF);
+			}
 			
-			//浮动框的控制
+			
+			//返回顶部的按钮事件
+			$(".go_top").click(function(){
+				$("body").stop().animate({scrollTop:0});
+			})
+			//右侧悬浮栏的动画控制
+			$("#float_right").stop().animate({"right":"0px"},1500)
+			
+			
+			//头部广告的控制
+			if(!!$(".main_con1").get(0)){
+				$("#header_ad_up").stop().slideDown(1000);
+				$(".header_ad_exit").click(function(){
+					log("sdf")
+					$("#header_ad_up").stop().slideUp(500);
+				})
+			}
+			
+			//引入购物车的头部控制
+			if(!!$("#shop_main").get(0)){
+				$("#float_right").css("display","none");
+				$("#float_header_up").css("display","none");
+				$("#search_up").css("display","none");
+				$("#banner_up").css("display","none");
+			}
+			
+			//浮动头部的控制
 			var float_header=$("#float_header_up");
 			var body=$("body");
 			$(window).scroll(function(){
@@ -19,6 +49,16 @@ require(["config"], function() {
 					float_header.css("display","none");
 				}
 			})
+			
+			//右侧浮动块的自适应高度
+//			$(".float_right").css("height",window.innerHeight)
+//			$(".float_right_1").css("height","14%");
+//			$(".float_right_2").css("height","18%");
+//			$(".float_right_3").css("height","40%");
+//			$(".float_right_4").css("height","83%");
+			
+			
+			
 			
 			//右侧购物车二级菜单变化
 //			var side_bar=$(".side_bar_chage");
@@ -57,7 +97,6 @@ require(["config"], function() {
 			var con=$(".search_input_guanjianci");
 			$(con).keyup(function(e){
 				e.stopPropagation();
-//				log(e.target)
 				var con_new=$(e.target);
 				var ul=con_new.siblings(".search_data_con");
 				if(con_new.val()!=""){
@@ -72,8 +111,8 @@ require(["config"], function() {
 						}
 					})
 				}else{
-					$(ul).remove();
-					con_new.val("");
+					$(ul).html("");
+//					con_new.val("");
 				}
 			})
 			function click_data(lis,ul){
@@ -160,12 +199,14 @@ require(["config"], function() {
 			var lis_children=$(lis_parent).children("div");
 			$(lis_parent).each(function(index,item){
 				$(this).hover(function(){
-					$(this).children("div").css({"display":"block","left":"180","z-index":999}).animate({
+					var zIndex=999;
+					$(this).children("div").css({"display":"block","left":"180","z-index":zIndex}).animate({
 						left:190,
 						opacity:0.96
-					},200)
+					},500);
+					zIndex++;
 				},function(){
-					$(this).children("div").fadeOut(200);
+					$(this).children("div").fadeOut(50);
 				})
 			})
 			

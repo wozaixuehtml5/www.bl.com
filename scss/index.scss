@@ -287,7 +287,7 @@ $active:#E6133C;
             width: 40px;
             z-index: 99999999;
             display: none;
-            @for $i from 1 through 8{
+            @for $i from 1 through 9{
                 .float_left_#{$i}{
                     height: 40px;
                     width: 40px;
@@ -579,7 +579,8 @@ $active:#E6133C;
                     text-align: center;
                     img{
                         vertical-align: middle;
-                        
+                        width: 200px;
+                        height: 200px;
                     }
                     span{
                         width: 0;
